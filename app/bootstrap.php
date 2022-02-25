@@ -1,10 +1,8 @@
 <?php
 // use of namespaces
-
 use App\Http\Controllers\HelloController;
 use App\Providers\Router;
 use Illuminate\Database\Capsule\Manager as Capsule;
-
 
 // define current directory as basepath
 define('BASEPATH', __DIR__);
@@ -12,8 +10,7 @@ define('BASEPATH', __DIR__);
 // composer autoloading, to load libs
 require BASEPATH . '/../vendor/autoload.php';
 
-
-
+// database
 $capsule = new Capsule;
 $capsule->addConnection([
     'driver' => 'mysql',
@@ -27,9 +24,6 @@ $capsule->addConnection([
 ]);
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
-
-
-
 
 // instantiate new router
 $router = new Router();
