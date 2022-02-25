@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <h1>Hallo iedereen</h1>
+    <h1>User detail</h1>
+
+    Naam: <?php echo $data->firstname . ' ' . $data->lastname; ?><br>
+    Naam: <?php echo $data->email; ?><br>
 </body>
 </html>
