@@ -9,8 +9,8 @@ class HelloController {
     public function showDutchHello() {
 
         $users = User::where('firstname', 'wout')->first();
-
-        return View::display('hello.php');
+        $view = View::display('hello.php');
+        return $view;
     }
 
     public function showFrenchHello() {
