@@ -1,6 +1,5 @@
 <?php
 // use of namespaces
-use App\Providers\Router;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 // define current directory as basepath
@@ -29,7 +28,5 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-// instantiate new router
-$router = new Router();
-include BASEPATH . "/Routes/web.php";
-$router->dispatch(); // beam me up, scotty!
+
+include BASEPATH . "/Routes/web-new.php";
